@@ -6,9 +6,8 @@ import thumbnail from '../assets/thumbnail.png';
 import { ResumeLinks } from './ResumeLinks';
 
 const navItems = [
-  { label: `Projects`, path: `/projects` },
+  { label: `Blog`, path: `/blog` },
   { label: `About`, path: `/about` },
-  { label: `Contact`, path: `/contact` },
 ];
 
 const socialLinks = [
@@ -90,9 +89,7 @@ const hoverEffectStyles = (theme: Theme) => ({
   },
 });
 
-const NavBtn = styled(Button, {
-  shouldForwardProp: prop => ![`component`, `to`].includes(prop as string),
-})<{ component?: React.ElementType; to?: string }>(({ theme }) => ({
+const NavBtn = styled(Button)<{ component?: React.ElementType; to?: string }>(({ theme }) => ({
   ...hoverEffectStyles(theme),
 }));
 
