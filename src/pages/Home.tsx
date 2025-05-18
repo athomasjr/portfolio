@@ -1,14 +1,18 @@
-import { Container, Typography } from '@mui/material';
+import { Container } from '@mui/material';
+import Hero from '../components/Hero';
 
 export default function Home() {
   return (
-    <Container maxWidth="lg" sx={{ mt: 4 }}>
-      <Typography variant="h2" component="h1" gutterBottom>
-        Welcome to My Portfolio
-      </Typography>
-      <Typography variant="h5" component="h2" gutterBottom>
-        Full Stack Developer
-      </Typography>
+    <Container
+      maxWidth={`lg`}
+      sx={{
+        height: `calc(100vh - 64px)`,
+        display: `flex`,
+        alignItems: `center`,
+        justifyContent: { xs: `center`, md: `flex-start` },
+      }}
+    >
+      <Hero />
     </Container>
   );
 }
