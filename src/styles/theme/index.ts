@@ -20,16 +20,19 @@ export const themeVariables = {
     error: `hsl(0, 65%, 51%)`,
     white: `#FFFFFF`,
   },
+  borders: {
+    test: `1px solid red`,
+  },
   fontSize: {
-    xs: `1rem`,
-    sm: `1.3rem`,
-    base: `1.6rem`,
-    md: `2rem`,
-    lg: `2.5rem`,
-    xl: `3.1rem`,
-    '2xl': `3.9rem`,
-    '3xl': `4.9rem`,
-    '4xl': `6.1rem`,
+    xs: `0.625rem`, // 10px
+    sm: `0.8125rem`, // 13px
+    base: `1rem`, // 16px
+    md: `1.25rem`, // 20px
+    lg: `1.5625rem`, // 25px
+    xl: `1.9375rem`, // 31px
+    '2xl': `2.4375rem`, // 39px
+    '3xl': `3.0625rem`, // 49px
+    '4xl': `3.8125rem`, // 61px
   },
   fontWeight: {
     normal: 400,
@@ -50,16 +53,25 @@ declare module '@mui/material/styles' {
 }
 
 const baseTheme = createTheme({
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          fontFamily: `"Source Sans Pro", sans-serif`,
+        },
+      },
+    },
+  },
   palette: {
     mode: `light`,
     primary: {
       main: themeVariables.colors.primary,
     },
     secondary: {
-      main: themeVariables.colors.accentYellow,
-      light: themeVariables.colors.accentYellow,
-      dark: themeVariables.colors.accentYellow,
-      contrastText: themeVariables.colors.primary,
+      main: themeVariables.colors.accentBrown,
+      light: themeVariables.colors.accentBrown,
+      dark: themeVariables.colors.accentBrown,
+      contrastText: themeVariables.colors.white,
     },
     error: {
       main: themeVariables.colors.error,
@@ -85,27 +97,38 @@ const baseTheme = createTheme({
     ].join(`,`),
     h1: {
       fontSize: themeVariables.fontSize[`3xl`],
+      lineHeight: 1.3,
+      fontWeight: themeVariables.fontWeight.black,
     },
     h2: {
       fontSize: themeVariables.fontSize[`2xl`],
+      lineHeight: 1.35,
+      fontWeight: themeVariables.fontWeight.bold,
     },
     h3: {
       fontSize: themeVariables.fontSize.xl,
+      lineHeight: 1.4,
+      fontWeight: themeVariables.fontWeight.semibold,
     },
     h4: {
       fontSize: themeVariables.fontSize.lg,
+      lineHeight: 1.4,
     },
     h5: {
       fontSize: themeVariables.fontSize.base,
+      lineHeight: 1.5,
     },
     h6: {
       fontSize: themeVariables.fontSize.sm,
+      lineHeight: 1.5,
     },
     body1: {
       fontSize: themeVariables.fontSize.base,
+      lineHeight: 1.6,
     },
     body2: {
       fontSize: themeVariables.fontSize.sm,
+      lineHeight: 1.6,
     },
   },
   // Add our custom variables to the theme
