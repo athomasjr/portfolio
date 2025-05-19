@@ -1,18 +1,10 @@
 import { Box, Typography, Avatar, Button } from '@mui/material';
-import avatar from '../assets/profile-avatar.png';
+import avatar from '../../assets/profile-avatar.png';
 
 export default function Hero() {
   return (
     <Box
       sx={{
-        border: `3px solid`,
-        borderColor: {
-          xs: `yellow`,
-          sm: `green`,
-          md: `purple`,
-          lg: `red`,
-          xl: `blue`,
-        },
         maxWidth: `1200px`,
         width: `100%`,
         display: `flex`,
@@ -32,6 +24,7 @@ export default function Hero() {
         <Typography
           variant="h1"
           gutterBottom
+          color="primary"
           sx={theme => ({
             fontSize: {
               xs: theme.typography.pxToRem(40),
@@ -39,7 +32,6 @@ export default function Hero() {
               md: theme.typography.pxToRem(72),
               lg: theme.typography.pxToRem(80),
             },
-            color: theme.custom.colors.textElectricBlue,
             lineHeight: 1.2,
           })}
         >

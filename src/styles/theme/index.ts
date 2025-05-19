@@ -54,6 +54,13 @@ declare module '@mui/material/styles' {
 
 const baseTheme = createTheme({
   components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: `none`,
+        },
+      },
+    },
     MuiCssBaseline: {
       styleOverrides: {
         body: {
