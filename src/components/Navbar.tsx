@@ -21,8 +21,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Logo from './Logo';
 
 const navItems = [
-  { label: `Blog`, path: `/blog` },
-  { label: `About`, path: `/about` },
+  { label: `Projects`, path: `#projects`, isHash: true },
+  { label: `About`, path: `#about`, isHash: true },
+  { label: `Blog`, path: `/blog`, isHash: false },
 ];
 
 const ctaLinks = [
@@ -108,9 +109,15 @@ export default function Navbar() {
               <List sx={{ display: `flex`, gap: 2, alignItems: `center` }}>
                 {navItems.map(item => (
                   <ListItem>
-                    <NavBtn key={item.path} color="inherit" component={RouterLink} to={item.path}>
-                      {item.label}
-                    </NavBtn>
+                    {item.isHash ? (
+                      <NavBtn key={item.path} color="inherit" component="a" href={item.path}>
+                        {item.label}
+                      </NavBtn>
+                    ) : (
+                      <NavBtn key={item.path} color="inherit" component={RouterLink} to={item.path}>
+                        {item.label}
+                      </NavBtn>
+                    )}
                   </ListItem>
                 ))}
               </List>
@@ -195,8 +202,10 @@ const hoverEffectStyles = (theme: Theme) => ({
   },
 });
 
-const NavBtn = styled(ListItemButton)<{ component?: React.ElementType; to?: string }>(
-  ({ theme }) => ({
-    ...hoverEffectStyles(theme),
-  })
-);
+const NavBtn = styled(ListItemButton)<{
+  component?: React.ElementType;
+  to?: string;
+  href?: string;
+}>(({ theme }) => ({
+  ...hoverEffectStyles(theme),
+}));
