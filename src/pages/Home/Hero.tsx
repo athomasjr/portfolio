@@ -73,6 +73,8 @@ export default function Hero() {
             Explore My Work
           </Button>
           <Button
+            component="a"
+            href="#contact"
             variant="outlined"
             color="secondary"
             size="large"
