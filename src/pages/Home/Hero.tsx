@@ -58,6 +58,8 @@ export default function Hero() {
         </Typography>
         <Box sx={{ display: `flex`, gap: 2, flexWrap: `wrap` }}>
           <Button
+            component="a"
+            href="#projects"
             variant="contained"
             color="primary"
             size="large"

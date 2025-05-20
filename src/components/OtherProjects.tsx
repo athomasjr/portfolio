@@ -1,6 +1,6 @@
-import { Stack, Typography } from '@mui/material';
-import Grid from '@mui/material/Grid';
-import ProjectCard, { Project } from './ProjectCard';
+import { Stack, Typography, Grid } from '@mui/material';
+import ProjectCard from './ProjectCard';
+import type { Project } from './ProjectCard';
 import kkcImg from '../assets/kkc.jpeg';
 import nutritionTrackerImg from '../assets/nutrition-tracker-thumbnail.jpeg';
 import readSleepEatRepeatImg from '../assets/resp1.png';

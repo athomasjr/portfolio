@@ -4,7 +4,7 @@ import OtherProjects from '../../components/OtherProjects';
 
 export default function Projects() {
   return (
-    <>
+    <Box id="projects">
       <Box
         sx={{
           backgroundColor: theme => theme.custom.colors.backgroundBlue15,
@@ -29,6 +29,6 @@ export default function Projects() {
           <OtherProjects />
         </Container>
       </Box>
-    </>
+    </Box>
   );
 }
