@@ -1,36 +1,34 @@
-import { Container, Box, Typography, Stack } from '@mui/material';
+import { Container, Box } from '@mui/material';
 import OngoingProjects from '../../components/OngoingProjects';
+import OtherProjects from '../../components/OtherProjects';
+
 export default function Projects() {
   return (
-    <Box
-      sx={{
-        backgroundColor: theme => theme.custom.colors.backgroundBlue15,
-      }}
-    >
-      <Container
-        maxWidth="lg"
+    <>
+      <Box
         sx={{
-          py: { xs: 6, md: 10 },
+          backgroundColor: theme => theme.custom.colors.backgroundBlue15,
         }}
       >
-        <Stack spacing={{ xs: 2, md: 4 }}>
-          <Typography
-            variant="h2"
-            component="h1"
-            gutterBottom
-            sx={{
-              color: `primary.main`,
-              fontWeight: 700,
-              textAlign: `center`,
-              fontSize: { xs: `2rem`, md: `2.5rem` },
-            }}
-          >
-            Ongoing Projects
-          </Typography>
-
+        <Container
+          maxWidth="lg"
+          sx={{
+            py: { xs: 6, md: 10 },
+          }}
+        >
           <OngoingProjects />
-        </Stack>
-      </Container>
-    </Box>
+        </Container>
+      </Box>
+      <Box>
+        <Container
+          maxWidth="lg"
+          sx={{
+            py: { xs: 6, md: 10 },
+          }}
+        >
+          <OtherProjects />
+        </Container>
+      </Box>
+    </>
   );
 }
