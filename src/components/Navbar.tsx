@@ -47,9 +47,15 @@ export default function Navbar() {
       <List>
         {navItems.map(item => (
           <ListItem disablePadding key={item.path}>
-            <NavBtn component={RouterLink} to={item.path}>
-              <ListItemText primary={item.label} />
-            </NavBtn>
+            {item.isHash ? (
+              <NavBtn component="a" href={item.path}>
+                <ListItemText primary={item.label} />
+              </NavBtn>
+            ) : (
+              <NavBtn component={RouterLink} to={item.path}>
+                <ListItemText primary={item.label} />
+              </NavBtn>
+            )}
           </ListItem>
         ))}
         {ctaLinks.map(link => (
