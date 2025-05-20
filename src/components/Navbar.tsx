@@ -23,6 +23,7 @@ import Logo from './Logo';
 const navItems = [
   { label: `Projects`, path: `#projects`, isHash: true },
   { label: `About`, path: `#about`, isHash: true },
+  { label: `Contact`, path: `#contact`, isHash: true },
   { label: `Blog`, path: `/blog`, isHash: false },
 ];
 
