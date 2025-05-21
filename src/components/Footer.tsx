@@ -3,7 +3,11 @@ import { FaGithub, FaLinkedin, FaDownload } from 'react-icons/fa';
 
 export default function Footer() {
   return (
-    <Box component="footer" sx={{ py: 4, bgcolor: `primary.main`, color: `primary.contrastText` }}>
+    <Box
+      id="footer"
+      component="footer"
+      sx={{ py: 4, bgcolor: `primary.main`, color: `primary.contrastText` }}
+    >
       <Container maxWidth="lg">
         <Stack direction="row" justifyContent="center" spacing={3} sx={{ mb: 2 }}>
           {[`Home`, `Projects`, `About`, `Contact`].map(section => (
