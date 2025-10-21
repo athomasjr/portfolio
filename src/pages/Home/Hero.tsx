@@ -35,7 +35,7 @@ export default function Hero() {
             lineHeight: 1.2,
           })}
         >
-          Senior Software Engineer
+          Staff Software Engineer
         </Typography>
         <Typography
           variant="h5"
@@ -53,8 +53,7 @@ export default function Hero() {
             mb: 4,
           })}
         >
-          Building scalable frontends with React and TypeScript. Leading architecture and
-          modernization at Powur.
+          Building scalable frontends with React, TypeScript and modern architecture.
         </Typography>
         <Box sx={{ display: `flex`, gap: 2, flexWrap: `wrap` }}>
           <Button
